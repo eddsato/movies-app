@@ -9,7 +9,7 @@ class MovieListRepositoryImpl @Inject constructor(
     private val api: MoviesAPI
 ) : MovieListRepository {
 
-    override suspend fun getMovieList(
+    override fun getMovieList(
         sortOption: String
     ) = Pager(
         config = PagingConfig(pageSize = RESULT_PAGE_SIZE, enablePlaceholders = false),

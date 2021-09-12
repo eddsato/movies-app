@@ -6,5 +6,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface MovieListRepository {
 
-    suspend fun getMovieList(sortOption: String): Flow<PagingData<MovieModel>>
+    fun getMovieList(sortOption: String): Flow<PagingData<MovieModel>>
 }
