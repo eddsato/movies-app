@@ -6,11 +6,11 @@ import com.eddsato.movies.presentation.movielist.model.MovieModel
 object MovieListMapper {
 
     fun convertMovieListResponseToMovieListModel(
-        response: ArrayList<MovieResponse>?
+        response: ArrayList<MovieResponse>
     ): ArrayList<MovieModel> {
         val movieList = ArrayList<MovieModel>()
 
-        response?.let {
+        response.let {
             for (movie in response) {
                 val model = setMovieModel(movie)
                 movieList.add(model)

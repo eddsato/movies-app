@@ -13,6 +13,4 @@ interface MoviesAPI {
         @Query("api_key") apiKey: String,
         @Query("page") page: Int
     ): MovieContainerResponse
-
-
 }

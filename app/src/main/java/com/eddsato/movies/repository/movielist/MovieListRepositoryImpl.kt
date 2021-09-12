@@ -1,10 +1,8 @@
 package com.eddsato.movies.repository.movielist
 
-import com.eddsato.movies.BuildConfig
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
 import com.eddsato.movies.commons.network.MoviesAPI
-import com.eddsato.movies.presentation.movielist.model.MovieModel
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 class MovieListRepositoryImpl @Inject constructor(
@@ -13,15 +11,12 @@ class MovieListRepositoryImpl @Inject constructor(
 
     override suspend fun getMovieList(
         sortOption: String
-    ): ArrayList<MovieModel> {
-        val response = withContext(Dispatchers.IO) {
-            api.getMovies(
-                sortOption,
-                BuildConfig.MOVIE_DATABASE_API_KEY,
-                1
-            )
-        }
+    ) = Pager(
+        config = PagingConfig(pageSize = RESULT_PAGE_SIZE, enablePlaceholders = false),
+        pagingSourceFactory = { MovieListPagingSource(api, sortOption) }
+    ).flow
 
-        return MovieListMapper.convertMovieListResponseToMovieListModel(response.movieResponse)
+    companion object {
+        private const val RESULT_PAGE_SIZE = 20
     }
 }

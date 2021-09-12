@@ -51,6 +51,7 @@ ext {
     retrofit_version = '2.9.0'
     hilt_version = '2.38.1'
     coroutine_version = '1.5.2'
+    paging_version = "3.0.1"
 }
 
 dependencies {
@@ -70,6 +71,9 @@ dependencies {
 
     // Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
+
+    // Paging
+    implementation "androidx.paging:paging-runtime:$paging_version"
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
