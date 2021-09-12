@@ -6,7 +6,7 @@ data class MovieContainerResponse(
     @SerializedName("page")
     var page: Int? = null,
     @SerializedName("results")
-    var movieResponse: List<MovieResponse>? = null,
+    var movieResponse: ArrayList<MovieResponse>? = null,
     @SerializedName("total_pages")
     var totalPages: Int? = null,
     @SerializedName("total_results")

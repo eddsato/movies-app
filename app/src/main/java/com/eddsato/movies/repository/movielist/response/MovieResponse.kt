@@ -12,7 +12,7 @@ class MovieResponse(
     @SerializedName("release_date")
     var releaseDate: String? = null,
     @SerializedName("genre_ids")
-    var genreIds: List<Int>? = null,
+    var genreIds: ArrayList<Int>? = null,
     @SerializedName("id")
     var id: Int? = null,
     @SerializedName("original_title")
@@ -30,5 +30,5 @@ class MovieResponse(
     @SerializedName("video")
     var video: Boolean? = null,
     @SerializedName("vote_average")
-    var totalResults: Double? = null
+    var voteAverage: Double? = null
 )

@@ -1,4 +1,4 @@
-package com.eddsato.movies.ui.movielist.usecase
+package com.eddsato.movies.presentation.movielist.usecase
 
 interface MovieListUseCase {
 

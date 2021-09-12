@@ -1,4 +1,4 @@
-package com.eddsato.movies.ui.movielist.model
+package com.eddsato.movies.presentation.movielist.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

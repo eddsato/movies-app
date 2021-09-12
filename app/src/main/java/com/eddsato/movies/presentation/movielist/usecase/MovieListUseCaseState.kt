@@ -1,6 +1,6 @@
-package com.eddsato.movies.ui.movielist.usecase
+package com.eddsato.movies.presentation.movielist.usecase
 
-import com.eddsato.movies.ui.movielist.model.MovieModel
+import com.eddsato.movies.presentation.movielist.model.MovieModel
 
 object MovieListUseCaseState {
 
