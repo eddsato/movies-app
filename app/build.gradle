@@ -50,7 +50,6 @@ android {
 
 ext {
     retrofit_version = '2.9.0'
-    hilt_version = '2.38.1'
     coroutine_version = '1.5.2'
     paging_version = "3.0.1"
     lifecycle_version = '2.3.1'
