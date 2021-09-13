@@ -16,6 +16,7 @@ import javax.inject.Inject
 class MovieListViewModel @Inject constructor (
     private val useCase: MovieListUseCase
 ) : BaseViewModel() {
+
     private val mutableViewState = MutableLiveData<MovieListViewState>()
     val viewState: LiveData<MovieListViewState> = mutableViewState
 

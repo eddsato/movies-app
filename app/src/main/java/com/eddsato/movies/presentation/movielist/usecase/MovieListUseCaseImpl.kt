@@ -1,6 +1,5 @@
 package com.eddsato.movies.presentation.movielist.usecase
 
-import com.eddsato.movies.presentation.movielist.model.MovieModel
 import com.eddsato.movies.repository.movielist.MovieListRepository
 import retrofit2.HttpException
 import java.io.IOException
